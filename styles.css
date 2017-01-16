@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(105,1,47);
+}
+h1 {
+  width: 50%;
+  height: 10%;
+  padding-top: 20px;
+  padding-left:25%;
+  padding-right:25%;
+  padding-bottom: 20px;
+  font-family:"Tahoma";
+  text-align:center;
+  text-decoration: shadow;
+  opacity: 0.9;
+  color:rgb(245,200,200);
+  background-color: rgb(118, 2, 53);
+  size:200px;
+}
+#eventDetails {
+  padding-left:50px;
+  width: 20%;
+  background-color: rgb(170, 110, 110);
+  height: 65%;
+}
+#googleMap {
+  margin: 50px;
+  align-items: center;
+  width: 48%;
+  height:48%;
+  float: right;
+  border:2px;
+  border-color:rgb(190, 110, 110);
+}
+h2 {
+  margin: 25px;
+  font-family:"Gill Sans";
+  color:rgb(255,255,255);
+}
+
+h4 {
+  margin: 25px;
+  font-family:"Gill Sans";
+  color:rgb(255,255,255);
+}
+</style>
