@@ -5,21 +5,21 @@ Happy new year nerds HEHheHEheHhEhE
 """
 
 import json
-#from sortedcollections import OrderedDict
+from sortedcollections import OrderedDict
 from stringfixer import stringfix
-#from firebase import *
+from firebase import *
 
-#firebase = firebase.FirebaseApplication('https://mapapp-2a84b.firebaseio.com/',None)
-#result = firebase.get('/events',None)
+firebase = firebase.FirebaseApplication('https://mapapp-2a84b.firebaseio.com/',None)
+result = firebase.get('/events',None)
 curr_events = []   #Gets list of curr. events on firebase database
-#for id_key,event in result.items():
-    #for key,val in event.items():
-        #try:
-            #event[key] = val.encode("utf-8")
-        #except:
-            #pass
-        #event[key.encode("utf-8")] = event.pop(key)
-    #curr_events.append(event)
+for id_key,event in result.items():
+    for key,val in event.items():
+        try:
+            event[key] = val.encode("utf-8")
+        except:
+            pass
+        event[key.encode("utf-8")] = event.pop(key)
+    curr_events.append(event)
 
 locDic = {"Clothier": (39.904258,-75.354876),
           "Bond Complex": (39.905395,-75.350844),
