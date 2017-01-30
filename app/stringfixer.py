@@ -15,6 +15,10 @@ def stringfix(string):
         index1 = string.rfind("PM",0,20)
         index2 = string.rfind("AM",0,20)
         if index1 > index2:
+	    if "End Time" in string:
+		time = string[len("End Time "):index1+2]
+		name = string[index1+3::]
+		return ["",time,name]
             if index1*index2 <= 0 and index1 < 10:
                 time = string[0:index1+2]
                 name = string[index1+3::]
@@ -34,8 +38,10 @@ def stringfix(string):
                 time = time.split(' - ')
                 name = string[index2 + 3::]
                 return [time[0],time[1],name]
-        
-    
+    else:
+	name = string
+	time = "All Day"
+	return [time,time,name]
         
         
 if __name__ == "__main__":

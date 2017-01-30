@@ -33,7 +33,8 @@ locDic = {"Clothier": (39.904258,-75.354876),
           "Matchbox": (39.901394,-75.355239),
           "Lamb-Miller Fieldhouse": (39.901279,-75.354112),
           "Trotter": (39.906415,-75.353912),
-          "Science Center": (39.906859,-75.355855)
+          "Science Center": (39.906859,-75.355855),
+	  "No Location": (39.904321,-75.351434)
 }
 
 class SwatScraper():
@@ -95,13 +96,13 @@ class SwatScraper():
                         if event in curr_events:
                             pass
                         else:
-                            print(event)#result = firebase.post("/events",event)
+                            result = firebase.post("/events",event)
                     else:
                         event = {"name":time_name[2], "start_time":time_name[0], "end_time":time_name[1], "location":location, "lat":locDic[location][0], "lng":locDic[location][1], "description":day}
                         if event in curr_events:
                             pass
                         else:
-                            print(event)#result = firebase.post("/events",event)
+                            result = firebase.post("/events",event)
                     __id += 1
             else:
                 pass
